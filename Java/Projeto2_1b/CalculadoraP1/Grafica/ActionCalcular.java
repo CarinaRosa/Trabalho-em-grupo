@@ -42,8 +42,8 @@ public class ActionCalcular extends AbstractAction {
             else if (cbxOperacao.getSelectedItem().equals("Divisão")) {
                 JOptionPane.showMessageDialog(null, String.format("O resultado de %f / %f é %f", x, y, calc.dividir()), "Calculadora Simpes", JOptionPane.INFORMATION_MESSAGE);
             }
-        }catch (ExceptionInInitializerError ex) {
-            JOptionPane.showMessageDialog(null, ("Digite um numero valido"), "Erro", JOptionPane.INFORMATION_MESSAGE);
+        }catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(null, ("Digite um numero valido!!"), "Erro!", JOptionPane.ERROR_MESSAGE);
         }
     }
     
