@@ -60,11 +60,7 @@ public class JogoDaMemoria extends JFrame{
             Escolha[i].addActionListener(Handler);
         }
         Button_Novo_Jogo.addActionListener(Handler);
-        Button_Re_Iniciar_Jogo.addActionListener(Handler);
-        Button_Estatisticas.addActionListener(Handler);
-        Sobre_JogoDaMemoria.addActionListener(Handler);
-
-     
+             
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);    
         this.setSize(500,500);
