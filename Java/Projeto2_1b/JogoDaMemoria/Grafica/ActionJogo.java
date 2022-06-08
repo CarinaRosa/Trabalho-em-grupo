@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 
 public class ActionJogo implements ActionListener{
     
+    private static final Object Button_Novo_Jogo = null;
     int Cont_Acertos,Primeiro_Click,Segundo_Click;
     int Numero_Click, posi, cont, pontos_Anterior, Maior_Pontuacao_do_Jogador;
     int Partidas_jogadas = 0, Numero_de_Vitorias = 0;
@@ -35,6 +36,7 @@ public class ActionJogo implements ActionListener{
         //     Fim_de_Jogo = true;
         // }
      
+        int pontos;
         if (Novo_Jogo == true){
          
             Cont_Acertos = 0;

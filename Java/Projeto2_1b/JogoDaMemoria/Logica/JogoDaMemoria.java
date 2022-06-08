@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import Projeto2_1b.JogoDaMemoria.Grafica.ActionJogo;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 public class JogoDaMemoria extends JFrame{
@@ -57,9 +59,9 @@ public class JogoDaMemoria extends JFrame{
      
         ActionJogo Handler = new ActionJogo();
         for (int i=0; i<16; ++i){
-            Escolha[i].addActionListener(Handler);
+            Escolha[i].addActionListener((ActionListener) Handler);
         }
-        Button_Novo_Jogo.addActionListener(Handler);
+        Button_Novo_Jogo.addActionListener((ActionListener) Handler);
              
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);    
