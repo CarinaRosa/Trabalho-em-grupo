@@ -40,5 +40,17 @@ public class FrmJogo extends JFrame{
      
         Barra_de_Status.add(Pontuacao_do_Jogador);
         add(Barra_de_Status, BorderLayout.SOUTH);
+
+        ActionJogo action = new ActionJogo();
+        for (int i=0; i<16; ++i){
+            Escolha[i].addActionListener(action);
+        }
+        Escolha.addActionListener(action);
+             
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);    
+        this.setSize(500,500);
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
     }
 }
