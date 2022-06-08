@@ -1,4 +1,6 @@
-package Teste1;
+package logica;
+
+import grafica.FrmJogo;
 
 public class ProgramaPrincipal {
     public static void main(String[] args) {

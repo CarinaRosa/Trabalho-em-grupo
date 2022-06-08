@@ -1,10 +1,10 @@
-package Projeto2_1b.JogoDaMemoria.Logica;
+package logica;
+
+import grafica.FrmJogo;
 
 public class ProgramaPrincipal {
-    
-    public static void main(String [] args){
-     
-        new JogoDaMemoria();
-     
-    } 
+    public static void main(String[] args) {
+        FrmJogo frmJogo = new FrmJogo();
+        frmJogo.setVisible(true);
+    }
 }
