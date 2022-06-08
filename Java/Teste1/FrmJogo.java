@@ -41,11 +41,11 @@ public class FrmJogo extends JFrame{
         Barra_de_Status.add(Pontuacao_do_Jogador);
         add(Barra_de_Status, BorderLayout.SOUTH);
 
-        ActionJogo action = new ActionJogo();
+        ActionJogo Handler = new Eventos_JogoDaMemoria();
         for (int i=0; i<16; ++i){
-            Escolha[i].addActionListener(action);
+            Escolha[i].addActionListener(Handler);
         }
-        Escolha.addActionListener(action);
+        Button_Novo_Jogo.addActionListener(Handler);
              
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);    
