@@ -17,4 +17,6 @@ public class Endereco {
         this.cep = cep;
         this.cidade = cidade;
     }
+
+    
 }
