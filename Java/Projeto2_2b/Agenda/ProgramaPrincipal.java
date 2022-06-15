@@ -15,7 +15,7 @@ public class ProgramaPrincipal {
         p.getTelefone().put("Comercial", "41 3222-3222");
         p.getTelefone().put("celular", "41 99999-8888");
 
-        p.getEndereco().put("Residencial", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua");
+        p.getEndereco().put( "Residencial", "Rua Huehue");
 
         agenda.add(new Endereco("Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
 

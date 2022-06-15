@@ -26,14 +26,13 @@ public class Pessoa{
 
     @Override
     public String toString(){
-        return String.format("Nome: %s; RG: %s; Data de nascimento: %s; Email: %s", nome, rg, data, p.getEmail().get("Email principal"), p.getTelefone().get("celular"), p.getEndereco().get(""));
+        return String.format("Nome: %s; RG: %s; Data de nascimento: %s; Email: %s", nome, rg, data, getEmail().get("Email principal"), getTelefone().get("celular"), getEndereco().get(""));
     }
 
     public Map<String, String> getEmail() {
         return email;
     }
-    public Map<String, String> getEndereco(String logradouro, int numero, String complemento, String bairro, String cep,
-    String cidade) {
+    public Map<String, String> getEndereco() {
         return endereco;
     }
     public Map<String, String> getTelefone() {
