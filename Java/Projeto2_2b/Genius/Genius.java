@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
+
 public class Genius extends JFrame implements ActionListener {
 
     JButton btnIniciar, btnAzul,  btnAmarelo, btnVermelho, btnVerde;
@@ -68,14 +69,13 @@ public class Genius extends JFrame implements ActionListener {
     public void revisarTurno(){
         if (contadorA == contador){
             contador = 0;
-            marcador = marcador = 5;
-            etiqueta.setText("Marcador: " + marcador  + " Record: " +cont);
+            marcador++;
+            etiqueta.setText("Marcador: " + marcador  + " Record: " + cont);
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (Exception e) {
                 
             }
-
             criarCor();
         }
     }
@@ -95,7 +95,7 @@ public class Genius extends JFrame implements ActionListener {
                     mudar(btnAzul,Color.ORANGE,Color.RED);
 
                 if (array [i].equals("verde")) 
-                    mudar(btnAzul, new Color(255,91,0),Color.GREEN);
+                    mudar(btnAzul, new Color(255,255,100),Color.GREEN);
                     i++;
 
             }
@@ -113,14 +113,13 @@ public class Genius extends JFrame implements ActionListener {
 
             if (array [i].equals("verde")) 
             mudar(btnAzul, new Color(255,255,100),Color.GREEN);
-            i++;
             contadorA++;
         }
     }
 
     public void mudar(JButton button, Color mudarCor, Color corOriginal){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (Exception e) {
            
         }
@@ -128,7 +127,7 @@ public class Genius extends JFrame implements ActionListener {
         this.update(this.getGraphics());
         Toolkit.getDefaultToolkit().beep();
         try {
-            Thread.sleep(100);
+            Thread.sleep(500);
         } catch (Exception e) {
            
         }
@@ -140,8 +139,8 @@ public class Genius extends JFrame implements ActionListener {
         @Override
        public void actionPerformed(ActionEvent e){
         // throw new UnsupportedOperationException("Mensagem");
-        if(iniciarJogo == true && e.getSource()!=btnIniciar){
-            if(contadorA >= contador){
+        if(iniciarJogo == true && e.getSource() !=btnIniciar){
+            if(contadorA > contador){
                 String c="";
 
                 if(e.getSource()==btnAzul)
@@ -174,7 +173,7 @@ public class Genius extends JFrame implements ActionListener {
             if(e.getSource()== btnIniciar){
                 iniciarJogo = true;
                 contador = 0;
-                contadorA =0;
+                contadorA = 0;
                 marcador = 0;
                     etiqueta.setText("Marcador: " + marcador + "Record: " + cont);
                     criarCor();
