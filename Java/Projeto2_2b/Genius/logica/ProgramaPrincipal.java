@@ -25,7 +25,7 @@ public class ProgramaPrincipal {
 
         registraListeners{geniusFrame, genius};
 
-        long ultimosSegundos = System.currentTimeMillis()
+        long ultimosSegundos = System.currentTimeMillis();
     }
     
 }
