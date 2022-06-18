@@ -97,23 +97,22 @@ public class Genius extends JFrame implements ActionListener {
                 if (array [i].equals("verde")) 
                     mudar(btnAzul, new Color(255,255,100),Color.GREEN);
                     i++;
+                }
+                int aleatorio = (int) (Math.random()*4);
+                 array[contadorA] = cores[aleatorio];
 
-            }
-            int aleatorio = (int) (Math.random()*4);
-            array[contadorA] = cores[aleatorio];
+                 if (array [i].equals("azul")) 
+                 mudar(btnAzul, new Color(66,50,156),Color.blue);
 
-            if (array [i].equals("azul")) 
-            mudar(btnAzul, new Color(66,50,156),Color.blue);
+                 if (array [i].equals("amarelo")) 
+                mudar(btnAzul, new Color(255,91,0),Color.YELLOW);
 
-             if (array [i].equals("amarelo")) 
-            mudar(btnAzul, new Color(255,91,0),Color.YELLOW);
+                if (array [i].equals("vermelho")) 
+                mudar(btnAzul, Color.ORANGE,Color.RED);
 
-             if (array [i].equals("vermelho")) 
-            mudar(btnAzul, Color.ORANGE,Color.RED);
-
-            if (array [i].equals("verde")) 
-            mudar(btnAzul, new Color(255,255,100),Color.GREEN);
-            contadorA++;
+                if (array [i].equals("verde")) 
+                mudar(btnAzul, new Color(255,255,100),Color.GREEN);
+                contadorA++;
         }
     }
 
