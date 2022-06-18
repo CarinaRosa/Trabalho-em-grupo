@@ -1,3 +1,4 @@
+package Projeto2_2b.Genius;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
