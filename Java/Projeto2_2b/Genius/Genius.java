@@ -81,7 +81,6 @@ public class Genius extends JFrame implements ActionListener {
         }
     }
 
-
     public void criarCor(){
         if( iniciarJogo == true){
             int i=0;
