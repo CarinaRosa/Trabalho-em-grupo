@@ -14,7 +14,7 @@ public class Genius extends JFrame implements ActionListener {
 
     JButton btnIniciar, btnAzul,  btnAmarelo, btnVermelho, btnVerde;
     JLabel etiqueta;
-    String array[] = new String [7];
+    String array[] = new String [20];
     int marcador, cont, contador, contadorA;
     boolean iniciarJogo;
     String cores [] = {"azul", "amarelo", "vermelho", "verde"};
