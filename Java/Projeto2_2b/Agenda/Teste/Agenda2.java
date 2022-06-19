@@ -45,9 +45,9 @@ public class Agenda2 {
     }
 
     public Contato[] buscarGeral(String palavraChave){
-        ArrayList<ContatoBasico>todos=new ArrayList();
-         for(int i=0;i<contatos.size();i++)
-          {   ContatoBasico c=contatos.get(i);
+        ArrayList<Contato> todos = new ArrayList();
+         for(int i = 0; i < contatos.size(); i++)
+          {   Contato c = contatos.get(i);
                if(c.getDados().contains(palavraChave))
                  todos.add(c);
            }
