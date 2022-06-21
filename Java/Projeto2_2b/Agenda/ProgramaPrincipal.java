@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class ProgramaPrincipal {
     public static void main(String[] args) {
         List<Pessoa> pessoas = new ArrayList<Pessoa>();
-        Pessoa contato[] = new Pessoa[3];
+        Pessoa contato[] = new Pessoa[1];
         // Pessoa email;
         // Pessoa telefone;
         // Pessoa endereco;
