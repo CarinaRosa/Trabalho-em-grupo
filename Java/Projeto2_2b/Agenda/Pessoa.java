@@ -27,7 +27,7 @@ public class Pessoa implements Comparable<Pessoa>{
 
     @Override
     public String toString(){
-        return String.format("Nome: %s;\n RG: %s;\n Data de nascimento: %s;\n Email: %s;\n Telefone: %s;\n Endereço: %s", nome, rg, data, email, telefone, endereco);
+        return String.format("Nome: %s;\n RG: %s;\n Data de nascimento: %s;\n Email: %s;\n Telefone: %s;\n Endereço: %s", nome, rg, data, getEmail().get("EmailPrincipal"), getTelefone().get("Celular"), getEndereco().get("Residencial"));
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Pessoa implements Comparable<Pessoa>{
         return this.nome.compareTo(o.nome);
     }
 
-
+    //getters
     public Map<String, String> getEmail() {
         return email;
     }
@@ -45,5 +45,17 @@ public class Pessoa implements Comparable<Pessoa>{
     public Map<String, String> getTelefone() {
         return telefone;
     }    
+
+    //setters
+    public void setEmail(Map<String, String> email) {
+        this.email = email;
+    }
+    public void setTelefone(Map<String, String> telefone) {
+        this.telefone = telefone;
+    }
+    public void setEndereco(Map<String, String> endereco) {
+        this.endereco = endereco;
+    }
+
 
 }

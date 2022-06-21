@@ -35,9 +35,9 @@ public class ProgramaPrincipal {
             System.out.println("Informe o email secundario: ");
             String email2 = teclado.next();
 
-            Pessoa e = new Pessoa(nome, rg, data);
-            e.getEmail().put("Email principal", email1);
-            e.getEmail().put("Email secundario", email2);
+            Pessoa email = new Pessoa(nome, rg, data);
+            email.getEmail().put("EmailPrincipal", email1);
+            email.getEmail().put("EmailSecundario", email2);
 
 
             System.out.printf("\n-------- Telefone --------\n");
@@ -49,10 +49,10 @@ public class ProgramaPrincipal {
             System.out.println("Informe numero Celular: ");
             String tell3 = teclado.next();
 
-            Pessoa t = new Pessoa(nome, rg, data);
-            t.getTelefone().put("Residencial", tell1);
-            t.getTelefone().put("Comercial", tell2);
-            t.getTelefone().put("Celular", tell3);
+            Pessoa telefone = new Pessoa(nome, rg, data);
+            telefone.getTelefone().put("Residencial", tell1);
+            telefone.getTelefone().put("Comercial", tell2);
+            telefone.getTelefone().put("Celular", tell3);
 
 
             System.out.printf("\n-------- Endereço Residencial--------\n");
@@ -105,9 +105,9 @@ public class ProgramaPrincipal {
 
             String comercial = log2 + num2 + comp2 + bairro2 + cep2 + cid2;
 
-            Pessoa end = new Pessoa(nome, rg, data);
-            end.getEndereco().put("Residencial", residencial);
-            end.getEndereco().put("Comercial", comercial);
+            Pessoa endereco = new Pessoa(nome, rg, data);
+            endereco.getEndereco().put("Residencial", residencial);
+            endereco.getEndereco().put("Comercial", comercial);
         }
 
         System.out.println("\n --------- Lista de Contatos ---------- \n");
