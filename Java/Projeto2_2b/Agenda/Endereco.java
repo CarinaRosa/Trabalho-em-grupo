@@ -1,6 +1,6 @@
 package Projeto2_2b.Agenda;
 
-public class Endereco {
+public class Endereco extends Pessoa{
     
     private String logradouro;
     private int numero;
@@ -9,7 +9,9 @@ public class Endereco {
     private String cep;
     private String cidade;
 
-    public Endereco(String logradouro, int numero,String complemento, String bairro, String cep, String cidade){
+    
+    public Endereco(String nome, String rg, String data, String logradouro, int numero,String complemento, String bairro, String cep, String cidade){
+        super(nome, rg, data);        
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
@@ -18,6 +20,7 @@ public class Endereco {
         this.cidade = cidade;
     }
 
+    
     public String getLogradouro() {
         return logradouro;
     }
@@ -36,6 +39,12 @@ public class Endereco {
     public String getCidade() {
         return cidade;
     }
+
+    // implements Comparable<Endereco>
+    //@Override
+    // public int compareTo(Endereco o) {
+    //     return this.nome.compareTo(o.nome);
+    // }
 
     
 }

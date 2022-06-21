@@ -5,7 +5,7 @@ package Projeto2_2b.Agenda;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Pessoa{
+public class Pessoa implements Comparable<Pessoa>{
     private String nome;
     private String rg;
     private String data;
@@ -14,6 +14,7 @@ public class Pessoa{
     private Map<String, String> endereco;
 
     public Pessoa(String nome, String rg, String data){
+        
         this.nome = nome;
         this.data = data;
         this.rg = rg;
@@ -26,8 +27,14 @@ public class Pessoa{
 
     @Override
     public String toString(){
-        return String.format("Nome: %s; RG: %s; Data de nascimento: %s; Email: %s", nome, rg, data, getEmail().get("Email principal"), getTelefone().get("celular"), getEndereco().get(""));
+        return String.format("Nome: %s;\n RG: %s;\n Data de nascimento: %s;\n Email: %s;\n Telefone: %s;\n Endereço: %s", nome, rg, data, email, telefone, endereco);
     }
+
+    @Override
+    public int compareTo(Pessoa o) {
+        return this.nome.compareTo(o.nome);
+    }
+
 
     public Map<String, String> getEmail() {
         return email;
@@ -37,6 +44,6 @@ public class Pessoa{
     }
     public Map<String, String> getTelefone() {
         return telefone;
-    }
+    }    
 
 }
