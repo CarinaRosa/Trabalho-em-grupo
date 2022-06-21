@@ -1,6 +1,6 @@
 package Projeto2_2b.Agenda;
 
-public class Endereco extends Pessoa{
+public class Endereco{
     
     private String logradouro;
     private int numero;
@@ -10,8 +10,8 @@ public class Endereco extends Pessoa{
     private String cidade;
 
     
-    public Endereco(String nome, String rg, String data, String logradouro, int numero,String complemento, String bairro, String cep, String cidade){
-        super(nome, rg, data);        
+    public Endereco( String logradouro, int numero,String complemento, String bairro, String cep, String cidade){
+               
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;

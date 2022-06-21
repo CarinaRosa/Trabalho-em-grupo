@@ -5,7 +5,7 @@ package Projeto2_2b.Agenda;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Pessoa implements Comparable<Pessoa>{
+public class Pessoa extends Endereco implements Comparable<Pessoa>{
     private String nome;
     private String rg;
     private String data;
@@ -13,8 +13,8 @@ public class Pessoa implements Comparable<Pessoa>{
     private Map<String, String> telefone;
     private Map<String, String> endereco;
 
-    public Pessoa(String nome, String rg, String data){
-        
+    public Pessoa(String nome, String rg, String data, String logradouro, int numero,String complemento, String bairro, String cep, String cidade){
+        super(logradouro, numero, complemento, bairro, cep, cidade);
         this.nome = nome;
         this.data = data;
         this.rg = rg;

@@ -6,18 +6,18 @@ import java.util.Collections;
 
 public class ProgramaPrincipal {
     public static void main(String[] args) {
-        List<Endereco> agenda = new ArrayList<Endereco>();
+        List<Pessoa> pessoas = new ArrayList<Pessoa>();
 
         // Pessoa p = new Endereco("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua");
 
-        agenda.add(new Endereco("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
+        pessoas.add(new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
 
-        for (Pessoa p : agenda) {
+        for (Pessoa p : pessoas) {
             System.out.println(p);
         }
-        Collections.sort(agenda);
+        Collections.sort(pessoas);
 
-        Pessoa p = new Endereco("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua");
+        Pessoa p = new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua");
         p.getEmail().put("Email principal", "carina@gmail.com");
         p.getEmail().put("Email secundario", "carina_2@gmail.com");
 
