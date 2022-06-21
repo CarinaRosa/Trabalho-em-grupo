@@ -8,12 +8,25 @@ import java.util.Collections;
 public class ProgramaPrincipal {
     public static void main(String[] args) {
         List<Pessoa> pessoas = new ArrayList<Pessoa>();
-
+        Pessoa contato[] = new Pessoa[3];
         Scanner teclado = new Scanner(System.in);
 
+        for (int i = 0; i < contato.length; i++) {
+            System.out.printf("\n-------- Aluno %d --------\n");
+
+            System.out.println("Nome: ");
+            String nome = teclado.next();
+            System.out.println("RG: ");
+            String rg = teclado.next();
+            System.out.println("Data de Nascimento: ");
+            String data = teclado.next();
+            
+            contato[i] = new Pessoa(nome, rg, data);
+        }
+        
         teclado.close();
 
-        pessoas.add(new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
+        // pessoas.add(new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
 
         // pp.add(new Endereco("Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
 
@@ -23,7 +36,7 @@ public class ProgramaPrincipal {
         System.out.println("\n---------------ORDENAÇÃO---------------\n");
         Collections.sort(pessoas);
         
-        Pessoa p = new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua");
+        // Pessoa p = new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua");
         p.getEmail().put("Email principal", "carina@gmail.com");
         p.getEmail().put("Email secundario", "carina_2@gmail.com");
 
