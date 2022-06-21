@@ -11,6 +11,8 @@ public class ProgramaPrincipal {
 
         Scanner teclado = new Scanner(System.in);
 
+        teclado.close();
+
         pessoas.add(new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
 
         // pp.add(new Endereco("Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
