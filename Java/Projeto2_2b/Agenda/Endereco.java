@@ -59,16 +59,10 @@ public class Endereco{
         this.cidade = cidade;
     }
 
-    // @Override
-    // public int compareTo(Endereco o) {
-    //     return this.bairro.compareTo(o.bairro);
-    // }
-
-    // implements Comparable<Endereco>
-    //@Override
-    // public int compareTo(Endereco o) {
-    //     return this.nome.compareTo(o.nome);
-    // }
-
+    @Override
+    public String toString(){
+        return super.toString() + ":\n"
+        + String.format("Logradouro: %s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", this.logradouro, this.numero, this.complemento, this.bairro, this.cep, this.cidade);
+    }
     
 }
