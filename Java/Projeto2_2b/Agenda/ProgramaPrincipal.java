@@ -1,12 +1,15 @@
 package Projeto2_2b.Agenda;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class ProgramaPrincipal {
     public static void main(String[] args) {
         List<Pessoa> pessoas = new ArrayList<Pessoa>();
+
+        Scanner teclado = new Scanner(System.in);
 
         pessoas.add(new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
 
