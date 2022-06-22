@@ -2,7 +2,7 @@ package Projeto2_2b.Agenda;
 
 import java.util.List;
 import java.util.Scanner;
-import java.io.PrintStream;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -64,10 +64,10 @@ public class ProgramaPrincipal {
             String cep = teclado.next();
             System.out.println("Cidade: ");
             String cid = teclado.next();
-
-            PrintStream residencial = System.out.printf("Rua: $s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", log, num, comp, bairro, cep, cid);
             
-
+            // String residencial = log + num + comp + bairro + cep + cid;
+            String residencial = "\nRua: " + log + ", " + "\nNumero: " + num + ", " +  "\nComplemento: " + comp + ", " + "\nBairro: " + bairro + ", " + "\nCEP: " + cep + ", " + "\nCidade: " + cid;
+            
             System.out.printf("\n-------- Endereço Comercial--------\n");
 
             System.out.println("Logradouro: ");
@@ -82,9 +82,9 @@ public class ProgramaPrincipal {
             String cep2 = teclado.next();
             System.out.println("Cidade: ");
             String cid2 = teclado.next();
-
-            PrintStream comercial = System.out.printf("Rua: $s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", log, num, comp, bairro, cep, cid);
             
+            String comercial = "\nRua: " + log2 + ", " + "\nNumero: " + num2 + ", " +  "\nComplemento: " + comp2 + ", " + "\nBairro: " + bairro2 + ", " + "\nCEP: " + cep2 + ", " + "\nCidade: " + cid2;
+
             contato[i].getEndereco().put("Residencial", residencial);
             contato[i].getEndereco().put("Comercial", comercial);
         }
