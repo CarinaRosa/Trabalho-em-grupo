@@ -15,7 +15,7 @@ public class Genius extends JFrame implements ActionListener {
 
     JButton btnIniciar, btnAzul,  btnAmarelo, btnVermelho, btnVerde;
     JLabel etiqueta;
-    String array[] = new String [20];
+    String array[] = new String [2000];
     int marcador, cont, contador, contadorA;
     boolean iniciarJogo;
     String cores [] = {"azul", "amarelo", "vermelho", "verde"};
@@ -73,7 +73,7 @@ public class Genius extends JFrame implements ActionListener {
             marcador++;
             etiqueta.setText("Marcador: " + marcador  + " Record: " + cont);
             try {
-                Thread.sleep(500);
+                Thread.sleep(1000);
             } catch (Exception e) {
                 
             }
@@ -89,13 +89,13 @@ public class Genius extends JFrame implements ActionListener {
                     mudar(btnAzul, new Color(66,50,156),Color.BLUE);
 
                  if (array [i].equals("amarelo")) 
-                    mudar(btnAzul, new Color(255,91,0),Color.YELLOW);
+                    mudar(btnAmarelo, new Color(255,91,0),Color.YELLOW);
 
                  if (array [i].equals("vermelho")) 
-                    mudar(btnAzul,Color.ORANGE,Color.RED);
+                    mudar(btnVermelho,Color.ORANGE,Color.RED);
 
                 if (array [i].equals("verde")) 
-                    mudar(btnAzul, new Color(255,255,100),Color.GREEN);
+                    mudar(btnVerde, new Color(255,255,100),Color.GREEN);
                     i++;
                 }
                 int aleatorio = (int) (Math.random()*4);
@@ -105,13 +105,13 @@ public class Genius extends JFrame implements ActionListener {
                  mudar(btnAzul, new Color(66,50,156),Color.blue);
 
                  if (array [i].equals("amarelo")) 
-                mudar(btnAzul, new Color(255,91,0),Color.YELLOW);
+                mudar(btnAmarelo, new Color(255,91,0),Color.YELLOW);
 
                 if (array [i].equals("vermelho")) 
-                mudar(btnAzul, Color.ORANGE,Color.RED);
+                mudar(btnVermelho, Color.ORANGE,Color.RED);
 
                 if (array [i].equals("verde")) 
-                mudar(btnAzul, new Color(255,255,100),Color.GREEN);
+                mudar(btnVerde, new Color(255,255,100),Color.GREEN);
                 contadorA++;
         }
     }
@@ -150,6 +150,7 @@ public class Genius extends JFrame implements ActionListener {
                     c="vermelho";
                 if(e.getSource()==btnVerde)
                     c="verde";
+                    
                 this.update(this.getGraphics());
                 if(c.equals(array[contador])){
                     contador++;
