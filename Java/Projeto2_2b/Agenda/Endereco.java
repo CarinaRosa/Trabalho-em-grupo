@@ -1,3 +1,4 @@
+// Feito por Ana Chaves e Carina Rosa
 package Projeto2_2b.Agenda;
 
 public class Endereco{
@@ -62,7 +63,4 @@ public class Endereco{
     @Override
     public String toString(){
         return super.toString() + ":\n"
-        + String.format("Logradouro: %s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", this.logradouro, this.numero, this.complemento, this.bairro, this.cep, this.cidade);
-    }
-    
-}
+        + String.format("Logradouro: %s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", this.logradouro, this.numero, this.complemento, this.bairro, this
