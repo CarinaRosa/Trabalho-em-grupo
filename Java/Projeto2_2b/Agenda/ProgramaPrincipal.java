@@ -100,10 +100,9 @@ public class ProgramaPrincipal {
             
         }
 
-        List<Pessoa> pessoas = new ArrayList<Pessoa>();
-
+        
         System.out.println("\n---------------ORDENAÇÃO---------------\n");
-        Collections.sort(contato);
+        Collections.sort(pessoas);
     
         teclado.close();
 
