@@ -94,11 +94,13 @@ public class ProgramaPrincipal {
         //     System.out.println(contato[i]);
         // }
 
-        // System.out.println("\n --------- Lista de Contatos ---------- \n");
-        // for (int i = 0; i < contato.length; i++) {
-        //     System.out.println(contato[i].toString());
+        System.out.println("\n --------- Lista de Contatos ---------- \n");
+        for (int i = 0; i < contato.length; i++) {
+            System.out.println(contato[i].toString());
             
-        // }
+        }
+
+        List<Pessoa> pessoas = new ArrayList<Pessoa>();
 
         System.out.println("\n---------------ORDENAÇÃO---------------\n");
         Collections.sort(contato);
