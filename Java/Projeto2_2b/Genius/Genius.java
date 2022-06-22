@@ -15,7 +15,7 @@ public class Genius extends JFrame implements ActionListener {
 
     JButton btnIniciar, btnAzul,  btnAmarelo, btnVermelho, btnVerde;
     JLabel etiqueta;
-    String array[] = new String [2000];
+    String array[] = new String [200];
     int marcador, cont, contador, contadorA;
     boolean iniciarJogo;
     String cores [] = {"azul", "amarelo", "vermelho", "verde"};
@@ -46,7 +46,7 @@ public class Genius extends JFrame implements ActionListener {
         btnVermelho = new JButton();
         btnVermelho.setBounds(100, 200, 100, 100);
         btnVermelho.setBackground(Color.RED);
-        btnAmarelo.addActionListener(this);
+        btnVermelho.addActionListener(this);
         this.add(btnVermelho);
 
         btnVerde = new JButton();
@@ -71,7 +71,7 @@ public class Genius extends JFrame implements ActionListener {
         if (contadorA == contador){
             contador = 0;
             marcador++;
-            etiqueta.setText("Marcador: " + marcador  + " Record: " + cont);
+            etiqueta.setText("Marcador: " + marcador+ " Record: " + cont);
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
@@ -161,7 +161,7 @@ public class Genius extends JFrame implements ActionListener {
                     if(marcador > cont){
                         cont = marcador;
                     }
-                  etiqueta.setText("Marcador: " + marcador + "Record: " + cont);  
+                  etiqueta.setText("Marcador: " + marcador + " Record: " + cont);  
                   iniciarJogo = false;
                   contador = 0;
                   contadorA = 0;
@@ -175,7 +175,7 @@ public class Genius extends JFrame implements ActionListener {
                 contador = 0;
                 contadorA = 0;
                 marcador = 0;
-                    etiqueta.setText("Marcador: " + marcador + "Record: " + cont);
+                    etiqueta.setText("Marcador: " + marcador + " Record: " + cont);
                     criarCor();
             }
         }
