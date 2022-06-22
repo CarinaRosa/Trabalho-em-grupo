@@ -1,4 +1,8 @@
+// Autoras: Ana Gabriela de Chaves e Carina de Araujo Rosa
+
+
 package Projeto2_2b.Genius;
+
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
