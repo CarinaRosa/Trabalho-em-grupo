@@ -2,16 +2,14 @@ package Projeto2_2b.Agenda;
 
 import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
+// import java.util.ArrayList;
 // import java.util.Collections;
 
 public class ProgramaPrincipal {
     public static void main(String[] args) {
-        List<Pessoa> pessoas = new ArrayList<Pessoa>();
+        // List<Pessoa> pessoas = new ArrayList<Pessoa>();
         Pessoa contato[] = new Pessoa[1];
-        // Pessoa email;
-        // Pessoa telefone;
-        // Pessoa endereco;
+        
         Scanner teclado = new Scanner(System.in);
 
         for (int i = 0; i < contato.length; i++) {
@@ -27,7 +25,6 @@ public class ProgramaPrincipal {
 
             contato[i] = new Pessoa(nome, rg, data);
 
-
             System.out.printf("\n-------- Email --------\n");
 
             System.out.println("Informe o email principal: ");
@@ -35,10 +32,8 @@ public class ProgramaPrincipal {
             System.out.println("Informe o email secundario: ");
             String email2 = teclado.next();
 
-            Pessoa email = new Pessoa(nome, rg, data);
-            email.getEmail().put("EmailPrincipal", email1);
-            email.getEmail().put("EmailSecundario", email2);
-
+            contato[i].getEmail().put("EmailPrincipal", email1);
+            contato[i].getEmail().put("EmailSecundario", email2);
 
             System.out.printf("\n-------- Telefone --------\n");
 
@@ -48,31 +43,14 @@ public class ProgramaPrincipal {
             String tell2 = teclado.next();
             System.out.println("Informe numero Celular: ");
             String tell3 = teclado.next();
-
-            Pessoa telefone = new Pessoa(nome, rg, data);
-            telefone.getTelefone().put("Residencial", tell1);
-            telefone.getTelefone().put("Comercial", tell2);
-            telefone.getTelefone().put("Celular", tell3);
+           
+            contato[i].getTelefone().put("Residencial", tell1);
+            contato[i].getTelefone().put("Comercial", tell2);
+            contato[i].getTelefone().put("Celular", tell3);
 
 
             System.out.printf("\n-------- Endereço Residencial--------\n");
-
-            /*Pessoa residencial[] = new Pessoa[6];
-            for (int j = 0; j < residencial.length; j++) {                
-                System.out.println("Logradouro: ");
-                residencial[0] = teclado.next();
-                System.out.println("Numero: ");
-                residencial[1] = teclado.nextInt();
-                System.out.println("Complemento: ");
-                residencial[2] = teclado.next();
-                System.out.println("Bairro: ");
-                residencial[3] = teclado.next();
-                System.out.println("CEP: ");
-                residencial[4] = teclado.next();
-                System.out.println("Cidade: ");
-                residencial[5] = teclado.next();
-            }*/
-
+          
             System.out.println("Logradouro: ");
             String log = teclado.next();
             System.out.println("Numero: ");
@@ -86,7 +64,8 @@ public class ProgramaPrincipal {
             System.out.println("Cidade: ");
             String cid = teclado.next();
 
-            String residencial = log + num + comp + bairro + cep + cid;
+            String residencial = 
+            log + num + comp + bairro + cep + cid;
 
             System.out.printf("\n-------- Endereço Comercial--------\n");
 
@@ -105,9 +84,8 @@ public class ProgramaPrincipal {
 
             String comercial = log2 + num2 + comp2 + bairro2 + cep2 + cid2;
 
-            Pessoa endereco = new Pessoa(nome, rg, data);
-            endereco.getEndereco().put("Residencial", residencial);
-            endereco.getEndereco().put("Comercial", comercial);
+            contato[i].getEndereco().put("Residencial", residencial);
+            contato[i].getEndereco().put("Comercial", comercial);
         }
 
         System.out.println("\n --------- Lista de Contatos ---------- \n");
