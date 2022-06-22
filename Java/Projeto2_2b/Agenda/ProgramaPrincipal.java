@@ -10,7 +10,7 @@ public class ProgramaPrincipal {
     public static void main(String[] args) {
         List<Pessoa> pessoas = new ArrayList<Pessoa>();
         Pessoa contato[] = new Pessoa[1];
-        
+      
         Scanner teclado = new Scanner(System.in);
 
         for (int i = 0; i < contato.length; i++) {
@@ -64,8 +64,7 @@ public class ProgramaPrincipal {
             String cep = teclado.next();
             System.out.println("Cidade: ");
             String cid = teclado.next();
-            
-            // String residencial = log + num + comp + bairro + cep + cid;
+        
             String residencial = "\nRua: " + log + ", " + "\nNumero: " + num + ", " +  "\nComplemento: " + comp + ", " + "\nBairro: " + bairro + ", " + "\nCEP: " + cep + ", " + "\nCidade: " + cid;
             
             System.out.printf("\n-------- Endereço Comercial--------\n");
@@ -87,14 +86,23 @@ public class ProgramaPrincipal {
 
             contato[i].getEndereco().put("Residencial", residencial);
             contato[i].getEndereco().put("Comercial", comercial);
+               
         }
 
-        System.out.println("\n --------- Lista de Contatos ---------- \n");
-        for (int i = 0; i < contato.length; i++) {
-            System.out.println(contato[i].toString());
+        // pessoas.add(new Pessoa("Ana", "134422335", "10/11/1997"));
+        // for (Pessoa contato[i] : pessoas) {
+        //     System.out.println(contato[i]);
+        // }
+
+        // System.out.println("\n --------- Lista de Contatos ---------- \n");
+        // for (int i = 0; i < contato.length; i++) {
+        //     System.out.println(contato[i].toString());
             
-        }
-        
+        // }
+
+        System.out.println("\n---------------ORDENAÇÃO---------------\n");
+        Collections.sort(contato);
+    
         teclado.close();
 
         // pessoas.add(new Pessoa("Carina", "13442255-3", "10/11/1997", "Rua Huehue", 123, "casa", "Legal", "81444-333", "Paranagua"));
