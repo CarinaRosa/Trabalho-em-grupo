@@ -2,12 +2,13 @@ package Projeto2_2b.Agenda;
 
 import java.util.List;
 import java.util.Scanner;
-// import java.util.ArrayList;
-// import java.util.Collections;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class ProgramaPrincipal {
     public static void main(String[] args) {
-        // List<Pessoa> pessoas = new ArrayList<Pessoa>();
+        List<Pessoa> pessoas = new ArrayList<Pessoa>();
         Pessoa contato[] = new Pessoa[1];
         
         Scanner teclado = new Scanner(System.in);
@@ -64,8 +65,8 @@ public class ProgramaPrincipal {
             System.out.println("Cidade: ");
             String cid = teclado.next();
 
-            String residencial = 
-            log + num + comp + bairro + cep + cid;
+            PrintStream residencial = System.out.printf("Rua: $s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", log, num, comp, bairro, cep, cid);
+            
 
             System.out.printf("\n-------- Endereço Comercial--------\n");
 
@@ -82,8 +83,8 @@ public class ProgramaPrincipal {
             System.out.println("Cidade: ");
             String cid2 = teclado.next();
 
-            String comercial = log2 + num2 + comp2 + bairro2 + cep2 + cid2;
-
+            PrintStream comercial = System.out.printf("Rua: $s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", log, num, comp, bairro, cep, cid);
+            
             contato[i].getEndereco().put("Residencial", residencial);
             contato[i].getEndereco().put("Comercial", comercial);
         }
