@@ -56,11 +56,15 @@ public class Endereco{
     }
     public void setCep(String cep) {
         this.cep = cep;
-    }public void setCidade(String cidade) {
+    }
+    public void setCidade(String cidade) {
         this.cidade = cidade;
     }
 
     @Override
     public String toString(){
         return super.toString() + ":\n"
-        + String.format("Logradouro: %s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", this.logradouro, this.numero, this.complemento, this.bairro, this
+        + String.format("Logradouro: %s\nNumero: %d\nComplemento: %s\nBairro: %s\nCEP: %s\nCidade: %s", this.logradouro, this.numero, this.complemento, this.bairro, this.cep, this.cidade);
+    }
+    
+}
